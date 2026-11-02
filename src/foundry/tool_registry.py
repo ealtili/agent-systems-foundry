@@ -3,7 +3,9 @@ from __future__ import annotations
 import asyncio
 import inspect
 import time
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
+
 from foundry.models import ToolDefinition, ToolResult
 
 
@@ -29,6 +31,7 @@ class ToolRegistry:
                 timeout_seconds=timeout_seconds,
             )
             return func
+
         return decorator
 
     def _introspect_schema(self, func: Callable[..., Any]) -> dict[str, Any]:

@@ -1,13 +1,10 @@
 from __future__ import annotations
 
 import json
-from typing import Any
+
 from pydantic import ValidationError
 
-try:
-    from .schema import StructuredPlan
-except ImportError:
-    from schema import StructuredPlan  # type: ignore[no-redef]
+from .schema import StructuredPlan
 
 
 class PlanExtractor:

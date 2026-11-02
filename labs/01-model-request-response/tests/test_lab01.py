@@ -1,4 +1,3 @@
-import pytest
 from src.client import PlanExtractor
 from src.schema import StructuredPlan
 

@@ -2,11 +2,11 @@ from __future__ import annotations
 
 import hashlib
 from collections import deque
-from enum import Enum
+from enum import StrEnum
 from typing import Any
 
 
-class ProgressVerdict(str, Enum):
+class ProgressVerdict(StrEnum):
     PROGRESSING = "progressing"
     EXACT_REPETITION = "exact_repetition"
     CYCLE_DETECTED = "cycle_detected"
