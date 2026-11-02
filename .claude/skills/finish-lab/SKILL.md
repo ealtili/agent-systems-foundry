@@ -1,0 +1,20 @@
+---
+name: finish-lab
+description: Complete the active lab, record takeaways, and advance pointer if /defend passed.
+disable-model-invocation: true
+---
+
+# Finish Lab Workflow
+
+When the user runs `/finish-lab`:
+1. Check whether `/defend` has been completed. If not, prompt the user to run `/defend` first.
+2. Review the 6 dimensions in `PROGRESS.md`:
+   - E (Explain)
+   - B (Build)
+   - D (Debug)
+   - A (Attack)
+   - V (Evaluate)
+   - C (Choose)
+3. Prompt the user for their final architectural takeaway and record it in `labs/<active_lab>/STATE.md`.
+4. Update `PROGRESS.md` status to `[*]` Mastered.
+5. Advance the active pointer in `PROGRESS.md` to the next lab in `CURRICULUM.md`.

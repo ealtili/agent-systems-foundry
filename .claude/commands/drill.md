@@ -1,0 +1,1 @@
+Inspect the active lab from `PROGRESS.md`. Enter Mode C (Examination) and inject an intentional defect, hidden harness flaw, or adversarial test in `tests/test_drill.py`. Challenge me to diagnose and repair it.
