@@ -3,7 +3,11 @@ from __future__ import annotations
 import json
 from typing import Any
 from pydantic import ValidationError
-from schema import StructuredPlan
+
+try:
+    from .schema import StructuredPlan
+except ImportError:
+    from schema import StructuredPlan  # type: ignore[no-redef]
 
 
 class PlanExtractor:
