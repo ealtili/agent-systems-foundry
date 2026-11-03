@@ -31,32 +31,32 @@
 | **04** | In-Process Tool Execution & ACI Design | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
 | **05** | Deadlines, Cancellation & Defensive Dispatch | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
 | **06** | Model Context Protocol (MCP) Foundations | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **07** | Compiler-in-the-Loop Backpressure | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **08** | ProgressMonitor Engine (Oscillation & Cycles)| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **09** | Shadow-Git Checkpoints & O(1) Rollback | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **10** | Long-Running Lifecycle & Progress Ledgers | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **11** | Control Loops & Dynamic Model Routing | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **12** | Tree Search Architectures (LATS) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **07** | Capability Security & Untrusted Ingestion | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **08** | Replay Harness & pass@k Evaluation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **09** | Compiler-in-the-Loop Backpressure | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **10** | ProgressMonitor Engine (Oscillation & Cycles)| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **11** | Shadow-Git Checkpoints & O(1) Rollback | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **12** | Long-Running Lifecycle & Progress Ledgers | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
 | **13** | Typed Execution Graphs (State Machines/DAGs)| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **14** | Codebase AST Graphs & Hybrid GraphRAG | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **15** | Supervisor-Worker & Peer Handoff Swarms | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **16** | Shared Blackboard Architectures | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **17** | Swarm Consensus & Worktree Isolation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **18** | Embodied Computer & Browser Automation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **19** | Capability Security & Untrusted Ingestion | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **20** | Indirect Prompt Injection Defense | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **21** | Automated AI Red Teaming with PyRIT | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **22** | HITL Checkpoints & Policy Circuit Breakers| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **23** | Scoped Rules & Slash Command Engineering | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **24** | Progressive Disclosure Skills (SKILL.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **25** | Custom Subagents & Context Isolation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **26** | Workspace MCP Orchestration (.mcp.json) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **27** | Lifecycle Hooks & Background Monitors | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **28** | Distributable Plugins & Headless CI | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **29** | Agent SDK Foundations (claude-agent-sdk) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **30** | SDK In-Process Tools & Programmatic Subagents| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **31** | SDK Permission Pipeline & Dynamic Hooks | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **32** | Hermetic Multi-Tenant SDK Sandboxing | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
-| **33** | Provider Abstraction & Cross-Runtime Bridge| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **14** | Control Loops & Dynamic Model Routing | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **15** | Tree Search Architectures (LATS) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **16** | Codebase AST Graphs & Hybrid GraphRAG | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **17** | Scoped Rules & Slash Command Engineering | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **18** | Progressive Disclosure Skills (SKILL.md) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **19** | Custom Subagents & Context Isolation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **20** | Supervisor-Worker & Peer Handoff Swarms | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **21** | Shared Blackboard Architectures | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **22** | Swarm Consensus & Worktree Isolation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **23** | Indirect Prompt Injection Defense | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **24** | HITL Checkpoints & Policy Circuit Breakers| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **25** | Automated AI Red Teaming with PyRIT | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **26** | Embodied Computer & Browser Automation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **27** | Workspace MCP Orchestration (.mcp.json) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **28** | Lifecycle Hooks & Background Monitors | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **29** | Distributable Plugins & Headless CI | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **30** | Agent SDK Foundations (claude-agent-sdk) | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **31** | SDK In-Process Tools & Programmatic Subagents| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **32** | SDK Permission Pipeline & Dynamic Hooks | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+| **33** | Hermetic Multi-Tenant SDK Sandboxing | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
 | **34** | Trajectory Evals & OpenTelemetry Spans | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
 | **35** | Capstone: Zero-Trust Autonomous SWE Agent | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |

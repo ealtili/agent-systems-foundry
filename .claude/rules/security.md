@@ -1,9 +1,10 @@
 ---
 paths:
-  - "labs/19*/**"
-  - "labs/20*/**"
-  - "labs/21*/**"
-  - "labs/22*/**"
+  - "labs/07*/**"
+  - "labs/23*/**"
+  - "labs/24*/**"
+  - "labs/25*/**"
+  - "labs/26*/**"
 ---
 
 # Security & PyRIT Red-Teaming Rules

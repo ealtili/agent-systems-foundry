@@ -1,10 +1,10 @@
 ---
 paths:
   - "src/foundry/**"
-  - "labs/07*/**"
-  - "labs/08*/**"
   - "labs/09*/**"
   - "labs/10*/**"
+  - "labs/11*/**"
+  - "labs/12*/**"
 ---
 
 # Harness Engineering & ProgressMonitor Rules

@@ -14,10 +14,10 @@ dependencies = [
 
 [dependency-groups]
 # Install a track's extras only when you reach it: uv sync --group track-d
-track-d = ["tree-sitter>=0.23.0", "networkx>=3.4.0"]          # Lab 14
-track-e = ["playwright>=1.49.0"]                              # Lab 18
-track-f = ["pyrit>=0.4.0"]                                    # Lab 21
-track-h = ["claude-agent-sdk>=0.1.0"]                         # Labs 29-32
+track-d = ["tree-sitter>=0.23.0", "networkx>=3.4.0"]          # Lab 16
+track-e = ["playwright>=1.49.0"]                              # Lab 26
+track-f = ["pyrit>=0.4.0"]                                    # Lab 25
+track-h = ["claude-agent-sdk>=0.1.0"]                         # Labs 30-33
 track-i = ["opentelemetry-api>=1.29.0", "opentelemetry-sdk>=1.29.0"]  # Lab 34
 dev = [
     "pytest>=8.3.0",

@@ -31,3 +31,6 @@ Problem: `[*]` was awarded by a model reading a markdown file.
 ## Known limits
 - The oracle is still in the repo; peeking is possible. The gate checks evidence, not honesty.
 - Labs must be run one at a time (each has its own `src` package).
+
+## Renumbering (2026-11-03)
+Labs were renumbered into study order (see CURRICULUM.md). References to lab numbers above use the OLD numbering. New Lab 08 (replay/pass@k harness) added; old Lab 33 dropped.
