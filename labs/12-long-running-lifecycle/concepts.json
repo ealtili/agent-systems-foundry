@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ledger-vs-summary",
+    "question": "Why must constraints live in a lossless ledger rather than a model-written summary?",
+    "hint": "Summaries are lossy and can drop non-negotiable state."
+  },
+  {
+    "id": "exactly-once-resume",
+    "question": "What does exactly-once effect mean after a crash, and how do idempotency keys provide it?",
+    "hint": "Record intent and completion keyed so replay does not repeat the effect."
+  },
+  {
+    "id": "memory-types",
+    "question": "List the memory types and give one repo artifact for each.",
+    "hint": "Working, session, episodic, semantic, procedural, team."
+  }
+]

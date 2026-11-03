@@ -1,0 +1,12 @@
+[
+  {
+    "id": "online-monitoring",
+    "question": "Which metrics would you alert on for a deployed agent and why those?",
+    "hint": "Cost per task, p95 latency, failure rate, judge drift."
+  },
+  {
+    "id": "kill-switch-degraded",
+    "question": "What are a kill switch and a degraded mode, and when do you use each?",
+    "hint": "Stop everything vs keep a safe reduced service."
+  }
+]

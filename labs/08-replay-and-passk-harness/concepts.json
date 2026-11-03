@@ -1,0 +1,17 @@
+[
+  {
+    "id": "passk-vs-passpowk",
+    "question": "When is pass^k the right reliability metric and pass@k misleading?",
+    "hint": "Production needs every run to succeed, not one of k."
+  },
+  {
+    "id": "judge-biases",
+    "question": "Name three LLM-as-judge biases and how you would test for each.",
+    "hint": "Position, verbosity, self-preference; swap order, control length, use another model."
+  },
+  {
+    "id": "test-set-discipline",
+    "question": "Why must the final score come from data you never tuned on?",
+    "hint": "Tuning on it turns the test set into a training set."
+  }
+]

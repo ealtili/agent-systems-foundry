@@ -1,0 +1,12 @@
+[
+  {
+    "id": "generation-verification-gap",
+    "question": "Why can checking be cheaper or more reliable than generating, and when does that fail?",
+    "hint": "Verifiable tasks; fails when the verifier is weak or gameable."
+  },
+  {
+    "id": "verifier-gaming",
+    "question": "How can a generator game its own verifier, and what policy prevents it?",
+    "hint": "Deleting tests, suppressions; keep verifier inputs out of editable scope."
+  }
+]

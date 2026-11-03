@@ -1,0 +1,12 @@
+[
+  {
+    "id": "four-surfaces",
+    "question": "Name the four ways to build a Claude agent and who hosts the loop and compute in each.",
+    "hint": "Manual loop, Tool Runner, Managed Agents, Agent SDK."
+  },
+  {
+    "id": "toolrunner-vs-agentsdk",
+    "question": "How do the Tool Runner and the Claude Agent SDK differ?",
+    "hint": "Tool Runner loops over your tools; Agent SDK is Claude Code as a library with built-in tools."
+  }
+]

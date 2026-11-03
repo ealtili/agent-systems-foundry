@@ -1,0 +1,12 @@
+[
+  {
+    "id": "equal-budget-compute",
+    "question": "Why compare best-of-N, revision and tree search at the same token budget?",
+    "hint": "Otherwise you measure spend, not method."
+  },
+  {
+    "id": "optimization-hierarchy",
+    "question": "State the optimization hierarchy and why training comes last.",
+    "hint": "Cheapest, most reversible fixes first."
+  }
+]
