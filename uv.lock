@@ -23,6 +23,75 @@ wheels = [
 ]
 
 [[package]]
+name = "agent-systems-foundry"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "anthropic" },
+    { name = "httpx" },
+    { name = "pydantic" },
+    { name = "pydantic-settings" },
+    { name = "python-dotenv" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "mypy" },
+    { name = "pytest" },
+    { name = "pytest-asyncio" },
+    { name = "ruff" },
+]
+track-d = [
+    { name = "networkx" },
+    { name = "tree-sitter" },
+]
+track-e = [
+    { name = "playwright" },
+]
+track-f = [
+    { name = "pyrit" },
+]
+track-h = [
+    { name = "claude-agent-sdk" },
+]
+track-i = [
+    { name = "opentelemetry-api" },
+    { name = "opentelemetry-sdk" },
+]
+track-j = [
+    { name = "google-antigravity" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "anthropic", specifier = ">=2.4.0" },
+    { name = "httpx", specifier = ">=0.28.0" },
+    { name = "pydantic", specifier = ">=2.10.0" },
+    { name = "pydantic-settings", specifier = ">=2.0.0" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "mypy", specifier = ">=1.13.0" },
+    { name = "pytest", specifier = ">=8.3.0" },
+    { name = "pytest-asyncio", specifier = ">=0.25.0" },
+    { name = "ruff", specifier = ">=0.8.0" },
+]
+track-d = [
+    { name = "networkx", specifier = ">=3.4.0" },
+    { name = "tree-sitter", specifier = ">=0.23.0" },
+]
+track-e = [{ name = "playwright", specifier = ">=1.49.0" }]
+track-f = [{ name = "pyrit", specifier = ">=0.4.0" }]
+track-h = [{ name = "claude-agent-sdk", specifier = ">=0.1.0" }]
+track-i = [
+    { name = "opentelemetry-api", specifier = ">=1.29.0" },
+    { name = "opentelemetry-sdk", specifier = ">=1.29.0" },
+]
+track-j = [{ name = "google-antigravity", specifier = ">=0.1.23" }]
+
+[[package]]
 name = "aiofiles"
 version = "25.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -682,75 +751,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/03/cf/4c66866fa9e2b1c78e3c911516d1de497a677b7ac60f1eceda74ce777ca3/charset_normalizer-3.5.2-cp37-abi3-win_arm64.whl", hash = "sha256:40ab6bffa02ae10a0581e6c198be7d2d8ca5c2a0c64e4ed3465d766df457573e", size = 294363, upload-time = "2026-09-30T04:38:51.312Z" },
     { url = "https://files.pythonhosted.org/packages/fc/ad/d07d7862a62ffa6d79d68074d14823243dd235a77c45262acbf6adeb28bf/charset_normalizer-3.5.2-py3-none-any.whl", hash = "sha256:b6b751274acb69d77b3323d6b7dbaa3c7fdfc1eb829b7eb61d262f32e1af9685", size = 68872, upload-time = "2026-09-30T04:39:21.828Z" },
 ]
-
-[[package]]
-name = "claude-agent-foundry"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "anthropic" },
-    { name = "httpx" },
-    { name = "pydantic" },
-    { name = "pydantic-settings" },
-    { name = "python-dotenv" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "mypy" },
-    { name = "pytest" },
-    { name = "pytest-asyncio" },
-    { name = "ruff" },
-]
-track-d = [
-    { name = "networkx" },
-    { name = "tree-sitter" },
-]
-track-e = [
-    { name = "playwright" },
-]
-track-f = [
-    { name = "pyrit" },
-]
-track-h = [
-    { name = "claude-agent-sdk" },
-]
-track-i = [
-    { name = "opentelemetry-api" },
-    { name = "opentelemetry-sdk" },
-]
-track-j = [
-    { name = "google-antigravity" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "anthropic", specifier = ">=2.4.0" },
-    { name = "httpx", specifier = ">=0.28.0" },
-    { name = "pydantic", specifier = ">=2.10.0" },
-    { name = "pydantic-settings", specifier = ">=2.0.0" },
-    { name = "python-dotenv", specifier = ">=1.0.1" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "mypy", specifier = ">=1.13.0" },
-    { name = "pytest", specifier = ">=8.3.0" },
-    { name = "pytest-asyncio", specifier = ">=0.25.0" },
-    { name = "ruff", specifier = ">=0.8.0" },
-]
-track-d = [
-    { name = "networkx", specifier = ">=3.4.0" },
-    { name = "tree-sitter", specifier = ">=0.23.0" },
-]
-track-e = [{ name = "playwright", specifier = ">=1.49.0" }]
-track-f = [{ name = "pyrit", specifier = ">=0.4.0" }]
-track-h = [{ name = "claude-agent-sdk", specifier = ">=0.1.0" }]
-track-i = [
-    { name = "opentelemetry-api", specifier = ">=1.29.0" },
-    { name = "opentelemetry-sdk", specifier = ">=1.29.0" },
-]
-track-j = [{ name = "google-antigravity", specifier = ">=0.1.23" }]
 
 [[package]]
 name = "claude-agent-sdk"

@@ -1,5 +1,5 @@
 [project]
-name = "claude-agent-foundry"
+name = "agent-systems-foundry"
 version = "0.1.0"
 description = "A test-driven systems laboratory for mastering Claude, the Claude Agent SDK, MCP, and agentic architectures."
 readme = "README.md"
