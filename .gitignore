@@ -44,6 +44,7 @@ htmlcov/
 
 # Local offline reading copies (not redistributed)
 .local-docs/
+.local-reference/
 
 # Claude Code (personal/local state; shared config in .claude/ stays tracked)
 .claude/settings.local.json

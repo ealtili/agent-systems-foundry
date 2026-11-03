@@ -36,4 +36,3 @@
 
 # Generated / reference material: collapse in diffs, exclude from language stats.
 uv.lock                    -diff linguist-generated=true
-reference/**               linguist-documentation=true

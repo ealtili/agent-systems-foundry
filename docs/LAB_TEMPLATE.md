@@ -16,7 +16,7 @@ A lab is not ready to start until every section exists. Author it just in time, 
 - `STATE.md`: predictions log, variance analysis, checklist.
 - `fixtures/`: replayable inputs (mark synthetic vs recorded).
 - `concepts.json`: 4-6 `{id, question, hint}` cards (registered when the lab is mastered).
-- `reference/drills/<NN>.md`: 3 prepared defects (Category A/B) + one Category C proposal, with root causes. Examiner-only.
+- `.local-reference/drills/<NN>.md`: 3 prepared defects (Category A/B) + one Category C proposal, with root causes. Examiner-only.
 - `tests/`: only contract tests for given interfaces; the learner adds the rest.
 
 ## Do not

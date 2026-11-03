@@ -47,15 +47,15 @@ python_version = "3.12"
 strict = true
 warn_unused_configs = true
 mypy_path = "scripts"
-exclude = ["reference/lab01_solution"]
+exclude = [".local-reference"]
 disallow_untyped_defs = true
 disallow_any_generics = true
 check_untyped_defs = true
 
 [tool.pytest.ini_options]
 minversion = "8.0"
-testpaths = ["tests", "reference/tests"]
-pythonpath = ["reference", "src", "scripts"]
+testpaths = ["tests"]
+pythonpath = [".local-reference", "src", "scripts"]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "function"
 markers = [

@@ -34,9 +34,8 @@ Claude Agent Foundry is not a set of passive tutorials. It is an active flight s
 │   ├── rules/                    # Path-scoped policies (auto-loaded via YAML globs)
 │   ├── skills/                   # On-demand workflows (/start-lab, /drill, /defend, etc.)
 │   ├── agents/                   # Context-isolated subagents (architect, reviewer, redteam)
-│   └── commands/                 # Native Claude Code slash commands
 ├── src/foundry/                  # YOUR harness package (built lab by lab; starts empty)
-├── reference/                    # Hidden oracle: used by /drill, never a starting point
+├── .local-reference/             # Examiner-only oracle, git-ignored, not in the public repo
 ├── scripts/gate.py               # Deterministic mastery gate (only writer of [*])
 └── labs/                         # 35 Hands-on experimental laboratories
 ```

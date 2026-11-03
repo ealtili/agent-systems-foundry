@@ -30,14 +30,14 @@ Applicable rungs of the Evidence Ladder (`ARCHITECTURE.md` §4): G1 static, G2 f
 ## Commands
 - Sync: `uv sync` (extras per track: `uv sync --group track-d`, `track-e`, `track-f`, `track-h`, `track-i`, `track-j`)
 - Format and lint: `uv run ruff check . --fix && uv run ruff format .`
-- Typecheck: `uv run mypy src tests reference scripts`, plus `uv run mypy --strict labs/<lab>` for the active lab
-- Repo tests: `uv run pytest` (covers `tests/` and `reference/tests/` only)
+- Typecheck: `uv run mypy src tests scripts`, plus `uv run mypy --strict labs/<lab>` for the active lab
+- Repo tests: `uv run pytest` (covers `tests/` only; with a local oracle also run `uv run pytest .local-reference/tests`)
 - One lab: `uv run pytest labs/<lab>/tests -v`
 - Mastery gate: `uv run python scripts/gate.py <lab-dir> [--mark]`
 - Slash commands: `/start-lab`, `/drill`, `/ladder`, `/defend`, `/finish-lab`, `/audit`, `/adr-new`
 
 ## Gotchas
-- `reference/` is the examiner-only oracle (`foundry_oracle`, archived Lab 01 solution, `drills/`). Never copy from it into `src/` or `labs/`, never quote it to the user, and open `reference/drills/` only during `/drill`. `src/foundry/` starts empty on purpose.
+- `.local-reference/` (git-ignored, absent from the public repo) is the examiner-only oracle (`foundry_oracle`, archived Lab 01 solution, `drills/`). Never copy from it into `src/` or `labs/`, never quote it to the user, and open `.local-reference/drills/` only during `/drill`. `src/foundry/` starts empty on purpose.
 - Lab 01 tests fail on purpose until the user implements `PlanExtractor`. Do not make them pass.
 - Run lab tests one lab at a time: each lab has its own `src` package.
 - Never hand-edit `[*]` in `PROGRESS.md`; only `scripts/gate.py --mark` sets it. Review state lives in `.foundry/concepts_state.json` (use `scripts/concepts.py`).

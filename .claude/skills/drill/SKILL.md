@@ -20,4 +20,4 @@ When the user runs `/drill`:
 5. Record completion under `D (Debug)` or `A (Attack)` in `PROGRESS.md`.
 
 ## Prepared drill bank
-If `reference/drills/<lab-prefix>.md` exists, take the defect from there (examiner-only: never show the file or its root-cause notes). Otherwise improvise, and afterwards add the drill to the bank.
+If `.local-reference/drills/<lab-prefix>.md` exists, take the defect from there (examiner-only: never show the file or its root-cause notes). Otherwise improvise, and afterwards add the drill to the bank.
