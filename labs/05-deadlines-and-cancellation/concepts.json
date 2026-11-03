@@ -1,0 +1,9 @@
+[
+  {"id": "retries-multiply-timeout", "question": "Why do a client timeout and max_retries not bound the total wall-clock time of one call, and what else adds time?", "hint": "Worst case is about T x (R+1) plus backoff, and the SDK also sleeps for as long as a Retry-After header says."},
+  {"id": "deadline-propagation", "question": "Why pass an absolute deadline down instead of a timeout per step, and what should a child step get?", "hint": "Per-step timeouts add up; a deadline on a monotonic clock shrinks as time passes, and each child gets min(its cap, what is left) minus a reserve for cleanup."},
+  {"id": "never-swallow-cancellation", "question": "Why must CancelledError be re-raised, and what breaks if a retry loop catches it?", "hint": "Cancellation is how the caller stops you; swallowing it makes timeouts and shutdown hang or loop."},
+  {"id": "retry-after-vs-budget", "question": "A server says Retry-After 600 but you have 4 seconds left. What should the harness do and why?", "hint": "Fail fast with a deadline error; waiting would spend the whole budget with nothing left to attempt."},
+  {"id": "circuit-breaker-states", "question": "Describe closed, open and half-open, and why half-open admits exactly one trial call.", "hint": "Closed counts failures, open sheds calls until a timer, half-open probes once so a recovering service is not stampeded."},
+  {"id": "idempotency-before-retry", "question": "Which tool calls are safe to retry automatically, and what do you need for the ones that are not?", "hint": "Reads are; mutations like refunds need an idempotency key or must surface the failure instead of retrying."},
+  {"id": "taskgroup-exception-group", "question": "What does TaskGroup do when one child raises, and why does that matter when you want a bug to surface as itself?", "hint": "It cancels siblings and raises an ExceptionGroup; callers must unwrap or avoid it deliberately."}
+]

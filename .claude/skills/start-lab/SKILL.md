@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Start Lab Workflow (With Mandatory Prediction Step)
 
-**Step 0: is the lab authored?** A lab is authored when it has a README "Read first" list, `fixtures/`, `concepts.json` and contract tests under `tests/` (Labs 01-04 are; see the README status table). If not, stop and run the authoring step before anything else:
+**Step 0: is the lab authored?** A lab is authored when it has a README "Read first" list, `fixtures/`, `concepts.json` and contract tests under `tests/` (Labs 01-05 are; see the README status table). If not, stop and run the authoring step before anything else:
 1. Say so and read `docs/LAB_TEMPLATE.md` and the lab's `README.md`/`HYPOTHESIS.md`.
 2. Re-verify every platform claim the lab depends on against the installed package or current docs (`docs/PLATFORM_FACTS.md` says which products move fast). Do not trust memory or the existing spec text: Lab 02's old spec assumed `temperature`, which no longer exists.
 3. Author only what the template lists: reading list, controlled variables, task spec, fixtures (mark synthetic vs recorded), `concepts.json`, contract tests for given interfaces, stubs raising `NotImplementedError`. Never write the control-flow core, and never pre-fill predictions.

@@ -1,6 +1,6 @@
 # Lab 05: Deadlines, Cancellation & Defensive Dispatch — State
 
-- **Current Status:** Not Started
+- **Current Status:** Not Started (authored: spec, fault-injection harness, deadline/retry/breaker/fanout contract tests)
 - **Active Mode:** Mode A (Guided)
 - **Mastery Dimensions:**
   - [ ] **E (Explain):** Mechanism and trade-offs understood.
@@ -19,6 +19,7 @@
 - [ ] G1 Static: `uv run ruff check labs/05-deadlines-and-cancellation`
 - [ ] G1 Static: `uv run mypy --strict labs/05-deadlines-and-cancellation`
 - [ ] G2 Functional: `uv run pytest labs/05-deadlines-and-cancellation/tests`
-- [ ] G3 Behavioral: Trajectory assertions verified
-- [ ] G5 Budget: In-budget verification
+- [ ] G3 Replay: `analyze` reproduces results from recorded rows
+- [ ] G4 Security: cancellation leaves no stray tasks; a harness bug is not swallowed
+- [ ] G6 Bound: System B wall-clock stays under its deadline plus stated slack in every scenario
 - [ ] G7 Defense: Passed `/defend`

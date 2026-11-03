@@ -1,0 +1,12 @@
+{"scenario": "healthy", "arm": "A", "run": 1, "outcome": "ok", "wall_s": 0.05, "endpoint_attempts": 1, "synthetic": true}
+{"scenario": "healthy", "arm": "B", "run": 1, "outcome": "ok", "wall_s": 0.05, "endpoint_attempts": 1, "synthetic": true}
+{"scenario": "flaky", "arm": "A", "run": 1, "outcome": "ok", "wall_s": 1.4, "endpoint_attempts": 3, "synthetic": true}
+{"scenario": "flaky", "arm": "B", "run": 1, "outcome": "ok", "wall_s": 1.2, "endpoint_attempts": 3, "synthetic": true}
+{"scenario": "rate_limited", "arm": "A", "run": 1, "outcome": "RateLimitError", "wall_s": 4.1, "endpoint_attempts": 3, "synthetic": true}
+{"scenario": "rate_limited", "arm": "B", "run": 1, "outcome": "DeadlineExceededError", "wall_s": 2.1, "endpoint_attempts": 2, "synthetic": true}
+{"scenario": "slow_recovery", "arm": "A", "run": 1, "outcome": "ok", "wall_s": 1.6, "endpoint_attempts": 2, "synthetic": true}
+{"scenario": "slow_recovery", "arm": "B", "run": 1, "outcome": "ok", "wall_s": 1.6, "endpoint_attempts": 2, "synthetic": true}
+{"scenario": "hang", "arm": "A", "run": 1, "outcome": "APITimeoutError", "wall_s": 4.2, "endpoint_attempts": 3, "synthetic": true}
+{"scenario": "hang", "arm": "B", "run": 1, "outcome": "DeadlineExceededError", "wall_s": 3.0, "endpoint_attempts": 3, "synthetic": true}
+{"scenario": "dead_burst", "arm": "A", "run": 1, "outcome": "20 failures", "wall_s": 28.5, "endpoint_attempts": 60, "synthetic": true}
+{"scenario": "dead_burst", "arm": "B", "run": 1, "outcome": "2 failures, 18 shed", "wall_s": 3.1, "endpoint_attempts": 6, "synthetic": true}
