@@ -73,5 +73,18 @@ Installed with `uv sync --group track-h --group track-j`: `claude-agent-sdk` 0.2
 - Hooks: `InspectHook`, `DecideHook`, `TransformHook`; concrete hooks `OnSessionStart/End`, `PreTurn`, `PostTurn`, `PreToolCallDecide`, `PostToolCall`, `OnToolError`, `OnInteraction`, `OnCompaction`, `StopHook` (`CONTINUE`/`ALLOW_STOP`).
 - Local model connections (LiteRT, OpenAI-compatible) ship in the package.
 
-## 5. Keeping this current
+## 5. Managed Agents (fetched 2026-11-03)
+Sources: https://platform.claude.com/docs/en/managed-agents/overview and `/quickstart`. Features marked (skill) come from the Claude API skill and were not re-fetched today.
+- **What it is:** a pre-built, configurable agent harness running in Anthropic-managed infrastructure, for long-running and asynchronous work. Status **beta**; header `managed-agents-2026-04-01` (the SDK sets it). Available on the Claude API, Claude Platform on AWS and Claude Models on Google Cloud (Anthropic managed). Supported on all current models.
+- **Core concepts:** Agent (model, system prompt, tools, MCP servers, skills; create once, reference by ID), Environment (cloud sandbox, or a self-hosted sandbox on your infrastructure), Session (a running agent instance), Events (user turns, tool results, status updates over SSE; history persisted server-side).
+- **Flow in Python:** `client.beta.agents.create(name, model, system, tools=[{"type": "agent_toolset_20260401"}])` -> `client.beta.environments.create(name, config={"type": "cloud", "networking": {"type": "limited", "allow_package_managers": True}})` -> `client.beta.sessions.create(agent=agent.id, environment_id=environment.id, title=...)` -> open `client.beta.sessions.events.stream(session.id)`, then `events.send(session.id, events=[{"type": "user.message", "content": [...]}])`; handle `agent.message`, `agent.tool_use`, `session.status_idle`.
+- **Built-in tools:** bash, file operations (read/write/edit/glob/grep), web search and fetch (restricted by `allowed_hosts` under `limited` networking), MCP servers.
+- **Declarative CLI:** `ant apply <file>` creates agents/environments from files and records IDs in `claude-lock.json`.
+- **Data handling:** sessions are stateful; transcripts persist until you delete them. **Not eligible for zero data retention or HIPAA BAA**, including self-hosted sandboxes.
+- **Research preview:** MCP tunnels and "dreaming" need access requests.
+- **More features (skill, unverified today):** vaults for credentials, scheduled deployments, outcomes with a grader rubric, multi-agent workflows (`multiagent` config), webhooks, memory stores (separate beta header), permission policies (`always_allow`/`always_ask`/`auto`).
+- **Installed SDK check:** `anthropic` 2.4.0 exposes `beta.agents`, `environments`, `sessions` (with `events.stream` and `events.send`), `vaults`, `deployments`, `memory_stores`; `agents.create` accepts `multiagent`, `mcp_servers`, `skills`, `execution_identity`. The repo floor was raised to `anthropic>=2.4.0`.
+- **Not to confuse with:** Claude Code dynamic workflows (section 1), the Claude Agent SDK (you host it), or the Tool Runner (a loop helper over the Messages API).
+
+## 6. Keeping this current
 Re-fetch the sources above before authoring any lab that depends on them, update the date at the top, and record changed verdicts in git. The Claude docs publish an index at https://code.claude.com/docs/llms.txt.

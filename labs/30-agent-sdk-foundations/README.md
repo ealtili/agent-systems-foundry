@@ -12,7 +12,7 @@ This laboratory investigates Agent SDK Foundations (claude-agent-sdk) from first
 4. Defend the design decisions via `/defend`.
 
 ## Spec v2 additions: choose your Claude surface
-**Read first:** the four ways to build an agent on Claude: a manual loop on the Messages API, the Tool Runner (SDK helper over the Messages API), Managed Agents (Anthropic runs the loop and hosts a per-session sandbox), and the Claude Agent SDK (Claude Code as a library; you host it). Key axes: who supplies the loop, who hosts the compute, which tools are built in. Verify against current official docs before relying on any detail; this surface changes quickly. Note the Tool Runner and the Agent SDK are different packages that are easy to confuse.
+**Read first:** the four ways to build an agent on Claude: a manual loop on the Messages API, the Tool Runner (SDK helper over the Messages API), Managed Agents (Anthropic runs the loop and hosts a per-session sandbox), and the Claude Agent SDK (Claude Code as a library; you host it). Key axes: who supplies the loop, who hosts the compute, which tools are built in. Verify against current official docs before relying on any detail; this surface changes quickly. Note the Tool Runner and the Agent SDK are different packages that are easy to confuse. Managed Agents has its own planned lab (`docs/planned_labs/managed-agents.md`); here you only decide when to choose it.
 
 **Deliverables (learner-owned):**
 1. Decide the six scenarios in `fixtures/scenarios.md` and defend each in `STATE.md` (who runs the loop, who hosts compute, what you give up). One scenario deliberately needs no agent.

@@ -33,6 +33,7 @@ Capstone = Lab 35 (zero-trust autonomous SWE agent) unless noted.
 | Observability | Lab 08 (replay logs) | Lab 34 | Lab 35 | OTel span attributes (`eval-standards` rule) | Lab 08 | Partial (OpenTelemetry arrives at Lab 34; earlier labs use replay logs only) |
 | Cost control | Lab 03 | Lab 05, every lab (G6) | Lab 35 | Budget ceilings in tests | Lab 01 | Covered |
 | Deployment and operations | Lab 29 | Lab 33, Lab 34 | Lab 35 | Headless CI run; kill-switch/incident drill | Lab 28 | Partial (v2 additions in Lab 34) |
+| Managed Agents (hosted harness, environments, sessions, event streams) | Planned | Planned | Planned | Same task on own harness vs Managed Agents; resume after client kill | Lab 07, Lab 12, Lab 24, Lab 30 | **Planned** (spec: `docs/planned_labs/managed-agents.md`; beta, verified 2026-11-03) |
 | Choosing a Claude surface | Lab 30 | Lab 30 | Lab 35 | Scenario decision + written defense | Lab 04 | Covered (v2 addition) |
 | Hybrid workflow engineering | Planned | Planned | Planned | Document/book workflow with gates | Lab 13, Lab 24 | **Planned** (spec: `docs/planned_labs/hybrid-workflow.md`; book-writing as alternate capstone) |
 | Claude Code parallel surfaces (agent teams, agent view, projects, `/batch`) | Planned | Planned | Planned | Choose-the-surface exercise across the five approaches | Lab 19, Lab 22 | **Planned** (only subagents and worktrees are covered today; teams and agent view are experimental/research preview) |
@@ -42,8 +43,9 @@ Capstone = Lab 35 (zero-trust autonomous SWE agent) unless noted.
 1. Hybrid workflow engineering lab, after Lab 13.
 2. Data-flywheel lab, after Lab 34.
 3. Second-runtime comparison (Claude Agent SDK vs Antigravity SDK on the same task), after Lab 33. Docs verified for the basics on 2026-11-03; remaining open items are listed in its spec.
-4. Dynamic workflows (Claude Code), after Lab 31. Term pinned down in `docs/PLATFORM_FACTS.md`.
-5. Alternate capstone: AI book-writing workflow.
+4. Managed Agents lab, after Lab 30 (spec in `docs/planned_labs/managed-agents.md`).
+5. Dynamic workflows (Claude Code), after Lab 31. Term pinned down in `docs/PLATFORM_FACTS.md`.
+6. Alternate capstone: AI book-writing workflow.
 
 ## How to read the gaps
 Specs for the first four slots live in `docs/planned_labs/`. Planned rows are honest zeros, not omissions. Do not claim mastery of a capability whose row says Planned.
