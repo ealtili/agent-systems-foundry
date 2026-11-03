@@ -1,0 +1,8 @@
+[
+  {"id": "sampling-params-removed", "question": "Which sampling parameters are no longer accepted on current Claude models, and what are the remaining ways to influence run-to-run variation?", "hint": "temperature/top_p/top_k are rejected; effort, prompt structure and max_tokens remain. Variation is measured with repeated runs, not tuned away."},
+  {"id": "effort-vs-thinking-tokens", "question": "What does the effort setting change, and why can output_tokens exceed the visible answer length?", "hint": "Adaptive thinking is billed as output even when its text is omitted from the response."},
+  {"id": "confidence-is-generated-text", "question": "A model writes confidence 0.9 in a typed field. Why is that not a computed probability, and how would you test whether it is calibrated?", "hint": "It is generated text; compare stated confidence with correctness over many items (Brier score, calibration bins)."},
+  {"id": "reasoning-artifact-not-faithful", "question": "Why is a model-written 'evidence' or 'plan' field not proof of how the answer was actually produced?", "hint": "It is another generation conditioned on the context; observable is not the same as faithful."},
+  {"id": "agreement-vs-accuracy", "question": "Why can a system have perfect run-to-run agreement and still be wrong?", "hint": "Consistency measures variance; accuracy measures bias. A confident wrong answer repeats."},
+  {"id": "confounded-ab", "question": "In this lab, system A and B differ in two ways at once. What is the confound, and what extra arm separates the effects?", "hint": "Output format and extra fields vary together; an answer-only schema arm (B0) isolates the format layer."}
+]

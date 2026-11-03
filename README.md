@@ -21,6 +21,20 @@ Claude Agent Foundry is not a set of passive tutorials. It is an active flight s
 
 ---
 
+## Status and design
+
+This is a **single-learner course**, built to be worked through by one person with Claude Code, not a library. It is a work in progress:
+
+| State | Labs | What exists |
+|---|---|---|
+| Authored | 01, 02 | Reading list, task spec, fixtures, contract tests (red until you implement), concept cards |
+| Spec only | 03-35 | Hypothesis and A/B design; authored just in time |
+| Planned | dynamic workflows, Managed Agents, hybrid workflow, second runtime, book-writing capstone | Drafts in `docs/planned_labs/`, unnumbered |
+
+Labs 03-10 are meant to be authored by hand ahead of time (stable tests for the fundamentals). Labs 11-35 are authored when you run `/start-lab`, which re-verifies fast-moving platform facts first (`docs/PLATFORM_FACTS.md`) and asks you to review the result before you begin. The examiner-only answer keys and drill banks are deliberately not in this repo: they live in a git-ignored `.local-reference/` folder.
+
+---
+
 ## Repository Layout
 
 ```text

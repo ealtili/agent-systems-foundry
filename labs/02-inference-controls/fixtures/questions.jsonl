@@ -1,0 +1,12 @@
+{"id": "q01", "question": "A train leaves at 14:20 and arrives at 17:05 the same day. How many minutes long is the trip? Answer with a number.", "answer": "165", "kind": "plain"}
+{"id": "q02", "question": "A bat and a ball cost 110 cents in total. The bat costs 100 cents more than the ball. How many cents does the ball cost? Answer with a number.", "answer": "5", "kind": "trap"}
+{"id": "q03", "question": "How many times does the letter r appear in the word strawberry? Answer with a number.", "answer": "3", "kind": "trap"}
+{"id": "q04", "question": "If 5 machines take 5 minutes to make 5 widgets, how many minutes do 100 machines take to make 100 widgets? Answer with a number.", "answer": "5", "kind": "trap"}
+{"id": "q05", "question": "What is 17 multiplied by 24? Answer with a number.", "answer": "408", "kind": "plain"}
+{"id": "q06", "question": "A patch of lily pads doubles in size every day and covers the whole lake on day 48. On which day does it cover half the lake? Answer with a number.", "answer": "47", "kind": "trap"}
+{"id": "q07", "question": "How many days are there from 2024-02-27 to 2024-03-02? Answer with a number.", "answer": "4", "kind": "plain"}
+{"id": "q08", "question": "Sam has some apples. He gives 3 of them to Priya. How many apples does Sam have now? If the question cannot be answered from the information given, answer unknown.", "answer": "unknown", "kind": "unanswerable"}
+{"id": "q09", "question": "What is the remainder when 2 to the power 10 is divided by 7? Answer with a number.", "answer": "2", "kind": "plain"}
+{"id": "q10", "question": "Alice is taller than Bob. Carol is shorter than Bob. Dave is taller than Alice. Who is the second tallest of the four? Answer with a first name.", "answer": "alice", "kind": "plain"}
+{"id": "q11", "question": "How many prime numbers are strictly between 20 and 40? Answer with a number.", "answer": "4", "kind": "plain"}
+{"id": "q12", "question": "A shirt costs 80 dollars after a 20 percent discount. What was the original price in dollars? Answer with a number.", "answer": "100", "kind": "trap"}

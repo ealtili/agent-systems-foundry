@@ -1,6 +1,6 @@
 # Lab 02: Inference Controls & Observable Reasoning Artifacts — State
 
-- **Current Status:** Not Started
+- **Current Status:** Not Started (authored: spec, fixtures, scoring contract tests)
 - **Active Mode:** Mode A (Guided)
 - **Mastery Dimensions:**
   - [ ] **E (Explain):** Mechanism and trade-offs understood.
@@ -19,6 +19,6 @@
 - [ ] G1 Static: `uv run ruff check labs/02-inference-controls`
 - [ ] G1 Static: `uv run mypy --strict labs/02-inference-controls`
 - [ ] G2 Functional: `uv run pytest labs/02-inference-controls/tests`
-- [ ] G3 Behavioral: Trajectory assertions verified
-- [ ] G5 Budget: In-budget verification
+- [ ] G3 Replay: `analyze.py` reproduces results from recorded rows
+- [ ] G6 Budget: spend under the estimate you approved
 - [ ] G7 Defense: Passed `/defend`

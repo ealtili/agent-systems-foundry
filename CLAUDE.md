@@ -38,7 +38,7 @@ Applicable rungs of the Evidence Ladder (`ARCHITECTURE.md` §4): G1 static, G2 f
 
 ## Gotchas
 - `.local-reference/` (git-ignored, absent from the public repo) is the examiner-only oracle (`foundry_oracle`, archived Lab 01 solution, `drills/`). Never copy from it into `src/` or `labs/`, never quote it to the user, and open `.local-reference/drills/` only during `/drill`. `src/foundry/` starts empty on purpose.
-- Lab 01 tests fail on purpose until the user implements `PlanExtractor`. Do not make them pass.
+- Lab 01 and Lab 02 tests fail on purpose until the user implements `PlanExtractor` and `src/scoring.py`. Do not make them pass.
 - Run lab tests one lab at a time: each lab has its own `src` package.
 - Never hand-edit `[*]` in `PROGRESS.md`; only `scripts/gate.py --mark` sets it. Review state lives in `.foundry/concepts_state.json` (use `scripts/concepts.py`).
 - Labs follow the renumbered order in `CURRICULUM.md`; `docs/IMPROVEMENT_PLAN.md` uses the old numbers.
