@@ -1,7 +1,7 @@
 # Planned lab: Second Runtime Comparison (Claude Agent SDK vs Antigravity SDK)
 
 **Slot:** after Lab 33. **Status:** spec only; **blocked until** the open items below are checked. **Facts:** `docs/PLATFORM_FACTS.md` sections 2 and 3.
-**Prereqs:** Labs 08, 30, 32, 34. Needs a Gemini API key. The `track-j` dependency group (`google-antigravity`) was approved by the user and added to `pyproject.toml` on 2026-11-03.
+**Prereqs:** Labs 05, 08, 30, 32, 34. Needs a Gemini API key. The `track-j` dependency group (`google-antigravity`) was approved by the user and added to `pyproject.toml` on 2026-11-03.
 
 ## Systems context
 Choose a platform from evidence, not brand. Implement the same small task on both Python SDKs, behind a shared tool contract, and compare quality, cost, latency, reliability and developer experience.
@@ -12,7 +12,7 @@ Questions for `STATE.md`: How does each SDK express "deny by default, allow read
 
 ## Task (learner-owned adapter and comparison)
 1. A vendor-neutral task fixture (fix a seeded failing test in a fixture repo) and a deterministic scorer (the test suite). Reuse the Lab 08 replay and pass@k/pass^k tooling.
-2. Two adapters behind one interface: `run(task, deadline) -> Result`. Typed result schema; explicit deadlines on both (Lab 05).
+2. Two adapters behind one interface: `run(task, deadline) -> Result`. Typed result schema; explicit deadlines on both, using your Lab 05 `Deadline`, because the Anthropic SDK's own timeouts do not bound total wall-clock time (`docs/PLATFORM_FACTS.md` section 6) and the Antigravity SDK's behavior is unverified: probe it first.
 3. Equivalent permissions on both, expressed in each SDK's own mechanism (Claude permission rules/hooks; Antigravity `deny`/`allow`/`ask_user` policies). Write the mapping table and name where they cannot be made equivalent.
 4. The same MCP server (Streamable HTTP or stdio) connected to both. Note the CLI/IDE do not support SSE.
 5. Run N trials each; report pass@k, pass^k, cost per solved task, p50/p95 latency; use a judge from a third model or tests only, never either vendor judging itself.

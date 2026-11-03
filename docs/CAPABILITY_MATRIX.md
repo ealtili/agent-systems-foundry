@@ -4,6 +4,7 @@ Where each capability is **introduced**, **practiced**, and **applied**, how it 
 
 Status: **Covered** (a lab teaches and assesses it) · **Partial** (taught, with a stated hole) · **Planned** (no lab yet; slot proposed).
 Capstone = Lab 35 (zero-trust autonomous SWE agent) unless noted.
+Covered means a lab in `CURRICULUM.md` teaches and assesses it. Whether that lab is fully authored is a separate question: see the status table in `README.md` (Labs 01-05 authored, the rest spec-only).
 
 | Capability | Introduced | Practiced | Applied | Assessment | Prerequisites | Status |
 | :--- | :---: | :---: | :---: | :--- | :--- | :--- |
@@ -16,6 +17,9 @@ Capstone = Lab 35 (zero-trust autonomous SWE agent) unless noted.
 | Graph-based workflows | Lab 13 | Lab 14, Lab 15 | Lab 35 | Reducer/router tests; replay | Lab 04 | Covered |
 | Dynamic workflows (Claude Code JS scripts driven from Python; Antigravity Python `run_workflow`) | Planned | Planned | Planned | Hand-written workflow vs subagents vs Python orchestration; resume prediction | Lab 13, Lab 19, Lab 20, Lab 31 | **Planned** (spec: `docs/planned_labs/dynamic-workflows.md`; facts verified 2026-11-03 in `docs/PLATFORM_FACTS.md`) |
 | Loops and termination | Lab 04 (loop), Lab 10 | Lab 14 | Lab 35 | Oscillation/cycle sabotage drills | Lab 04 | Covered |
+| Inference controls (effort, adaptive thinking; sampling parameters no longer exist) | Lab 02 | Lab 02 | Lab 14 | Run-to-run agreement over k runs; Brier score and calibration bins of stated confidence | Lab 01 | Covered |
+| Prompt caching and context cost | Lab 03 | Lab 04 (byte-stable schemas), Lab 12 | Lab 35 | Pricing, prefix-divergence and cache-health contract tests; invalidator sabotage arm | Lab 01 | Covered |
+| Reliability: deadlines, retries, cancellation, circuit breakers | Lab 05 | Lab 09, Lab 12, Lab 20 | Lab 35 | Fault injection through the real SDK; cancellation leaves no stray tasks | Lab 04 | Covered |
 | Memory and context engineering | Lab 03 | Lab 12 | Lab 35 | Memory-taxonomy mapping; compaction A/B | Lab 03 | Covered (v2 additions in Lab 12) |
 | Long-horizon agents | Lab 12 | Lab 12 | Lab 35 | Crash-at-every-step resume test | Lab 10, Lab 11 | Covered (v2 additions in Lab 12) |
 | Model routing | Lab 14 | Lab 14 | Planned | Cost/quality A/B across tiers | Lab 08 | Partial (single vendor only) |

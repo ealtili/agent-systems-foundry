@@ -86,5 +86,37 @@ Sources: https://platform.claude.com/docs/en/managed-agents/overview and `/quick
 - **Installed SDK check:** `anthropic` 2.4.0 exposes `beta.agents`, `environments`, `sessions` (with `events.stream` and `events.send`), `vaults`, `deployments`, `memory_stores`; `agents.create` accepts `multiagent`, `mcp_servers`, `skills`, `execution_identity`. The repo floor was raised to `anthropic>=2.4.0`.
 - **Not to confuse with:** Claude Code dynamic workflows (section 1), the Claude Agent SDK (you host it), or the Tool Runner (a loop helper over the Messages API).
 
-## 6. Keeping this current
-Re-fetch the sources above before authoring any lab that depends on them, update the date at the top, and record changed verdicts in git. The Claude docs publish an index at https://code.claude.com/docs/llms.txt.
+## 6. Claude API facts used by Labs 01-05 (verified 2026-11-03)
+Provenance differs from sections 1 to 5: these come from the Claude API skill bundled with Claude Code 2.1.316 (its reference files, not fetched from the website today) and from probes against the installed `anthropic` 2.4.0. Where a probe was run it is marked (probe). Model: `claude-haiku-5-5`.
+
+**Sampling and thinking**
+- `temperature`, `top_p`, `top_k`: Haiku 5.5, Sonnet 5.5 and Sonnet 5 reject non-default values; Opus 4.7 and later reject any value; on API version `2026-10-21` all three are rejected on every model. Labs must not set them. Variation is measured by repeating runs (Lab 02).
+- Haiku 5.5 thinking: adaptive only and on by default; `budget_tokens` returns 400; thinking text is omitted unless `display` asks for a summary; assistant prefill returns 400. Depth is set with `output_config.effort` (default `medium`). Opus 5.5 cannot disable thinking; Sonnet 5.5 returns 400 for `{"type": "disabled"}`.
+- Thinking tokens are billed as output even when their text is omitted, so `output_tokens` can exceed the visible answer.
+
+**Tools**
+- Forced `tool_choice` (`any` or a named tool): accepted by Haiku 5.5 (and then it skips thinking); rejected with 400 by Opus 5.5, Sonnet 5.5, Fable 5.1 and Mythos 5.1. Use `auto` and check that a call was made.
+- Tool results for one assistant turn go back together in one user message, each `tool_result` carrying its `tool_use_id`; failures use `is_error: true`. What the API does when a result is missing or the id is wrong was NOT verified; Lab 04 has the learner probe it.
+- `strict: true` on a tool requires `additionalProperties: false` in its schema.
+- A `tool_use` block in a response with `stop_reason: "max_tokens"` may hold a truncated input that still parses; do not execute it.
+- Replay the assistant's content unchanged: editing earlier turns invalidates thinking blocks and the cache prefix.
+
+**Prompt caching**
+- Prefix match; render order is tools, then system, then messages; at most 4 breakpoints; any byte change invalidates everything after it. Non-deterministic serialization (unsorted keys, sets), timestamps and per-request IDs in the prefix are silent invalidators.
+- Minimum cacheable prefix is 512 tokens on Haiku 5.5 (the skill says to check the prompt-caching docs before relying on it); a shorter prefix silently does not cache (`cache_creation_input_tokens` is 0).
+- Reads cost 0.1x the input price; writes cost 1.25x (5-minute TTL) or 2x (1-hour TTL). Break-even is 2 requests for the 5-minute TTL and 3 for the 1-hour TTL.
+- `usage.input_tokens` is only the uncached remainder; the prompt total is `input_tokens + cache_read_input_tokens + cache_creation_input_tokens`.
+- Installed SDK (probe): `messages.create` accepts a top-level `cache_control`; `usage` has `cache_creation` (the 5-minute and 1-hour split), `cache_creation_input_tokens` and `cache_read_input_tokens`.
+
+**Pricing (Haiku 5.5)**: $0.10 input and $0.50 output per million tokens for prompts of 100K tokens or fewer, $0.50 and $2.50 above that. Re-check the pricing page before budgeting a live run.
+
+**SDK resilience (installed `anthropic` 2.4.0)**
+- Defaults: `max_retries=2`, timeout 10 minutes (5 s connect), backoff 0.5 s doubling to a maximum of 8 s with jitter.
+- Retried: 408, 409, 429, every 5xx, connection errors and timeouts; the `x-should-retry` response header overrides.
+- The SDK sleeps for as long as `retry-after-ms` or `retry-after` says, with no practical cap, so `timeout` and `max_retries` do not bound total wall-clock time (probe: a 300 ms `retry-after-ms` was obeyed on each retry).
+- Retries multiply the timeout (probe: `timeout=0.3`, `max_retries=1` against a hung endpoint took 1.21 s). An outer `asyncio.timeout` cancels the whole call cleanly, including `timeout=30, max_retries=2` (probe).
+- The request carries per-phase timeouts (`connect`, `read`, `write`, `pool`), not a total deadline (probe).
+- The SDK's HTTP client is `httpx2` (2.16.0 installed), a dependency of `anthropic` that this repo does not declare directly. `AsyncAnthropic(http_client=...)` accepts a custom client, so faults can be injected offline; a mock transport does not enforce timeouts itself, so the fault harness raises a read timeout on purpose (`labs/05-deadlines-and-cancellation/src/faults.py`). Lab 05's given tests pin all of the above.
+
+## 7. Keeping this current
+Re-fetch the sources above before authoring any lab that depends on them, update the date at the top, and record changed verdicts in git. The Claude docs publish an index at https://code.claude.com/docs/llms.txt. For section 6, re-run `uv run pytest labs/05-deadlines-and-cancellation/tests/test_faults.py` after any SDK upgrade: it fails first if retry or timeout behavior changed.

@@ -23,7 +23,7 @@ A = your own harness (Lab 10 to 12) running the task. B = a Managed Agents sessi
 3. Write the event-stream client: open the stream before sending, handle `agent.message`, `agent.tool_use`, `session.status_idle`, reconnect without duplicating processed events, and enforce your own deadline (Lab 05).
 4. Add a permission policy so risky tool calls pause for human approval; connect it to the Lab 24 approval flow. Log every decision.
 5. Kill the client mid-run and resume the same session; compare with your Lab 12 crash test.
-6. Cost and budget: record usage per session and set a ceiling; compare with Lab 03 caching numbers.
+6. Cost and budget: record usage per session and set a ceiling; compare with Lab 03 caching numbers (reuse your `price_usage` if the usage fields line up; if they do not, say how).
 7. One platform feature of your choice at the end (outcomes with a rubric, a scheduled deployment, or a memory store), chosen with a written reason.
 8. Delete your sessions when done (transcripts persist until deleted).
 Live runs exceed the 20k-token threshold: ask for approval with a dollar estimate.

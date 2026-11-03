@@ -2,6 +2,7 @@
 
 **Slot:** after Lab 13 (typed execution graphs). **Status:** spec only. **Alternate capstone:** the AI book-writing workflow reuses this lab's skeleton.
 **Prereqs:** Labs 05, 08, 11, 12, 13, 24.
+**Reuse (write your own, do not copy):** Lab 05 `Deadline`, `call_with_retry` and `CircuitBreaker` for stage retries and the dead-letter bucket, and its fault-injection approach (`labs/05-deadlines-and-cancellation/src/faults.py`) to poison documents deliberately.
 
 ## Systems context
 Production systems wrap agentic steps in deterministic scaffolding: schemas, validation gates, retries, checkpoints, approvals and recovery. This lab separates *workflow artifacts* (stage list, assignments, validation, approvals, final assembly) from *agentic work* (research synthesis, drafting, review, revision).
