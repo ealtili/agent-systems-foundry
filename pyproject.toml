@@ -19,6 +19,7 @@ track-e = ["playwright>=1.49.0"]                              # Lab 26
 track-f = ["pyrit>=0.4.0"]                                    # Lab 25
 track-h = ["claude-agent-sdk>=0.1.0"]                         # Labs 30-33
 track-i = ["opentelemetry-api>=1.29.0", "opentelemetry-sdk>=1.29.0"]  # Lab 34
+track-j = ["google-antigravity>=0.1.23"]                        # planned second-runtime comparison
 dev = [
     "pytest>=8.3.0",
     "pytest-asyncio>=0.25.0",

@@ -28,7 +28,7 @@ The user is training to be an AI Systems Architect. Speed up implementation, but
 Applicable rungs of the Evidence Ladder (`ARCHITECTURE.md` §4): G1 static, G2 functional, G3 replay, G4 security, G5 pass@k, G6 budget, G7 `/defend`. Compiling is not done.
 
 ## Commands
-- Sync: `uv sync` (extras per track: `uv sync --group track-d`, `track-e`, `track-f`, `track-h`, `track-i`)
+- Sync: `uv sync` (extras per track: `uv sync --group track-d`, `track-e`, `track-f`, `track-h`, `track-i`, `track-j`)
 - Format and lint: `uv run ruff check . --fix && uv run ruff format .`
 - Typecheck: `uv run mypy src tests reference scripts`, plus `uv run mypy --strict labs/<lab>` for the active lab
 - Repo tests: `uv run pytest` (covers `tests/` and `reference/tests/` only)
@@ -43,6 +43,7 @@ Applicable rungs of the Evidence Ladder (`ARCHITECTURE.md` §4): G1 static, G2 f
 - Never hand-edit `[*]` in `PROGRESS.md`; only `scripts/gate.py --mark` sets it. Review state lives in `.foundry/concepts_state.json` (use `scripts/concepts.py`).
 - Labs follow the renumbered order in `CURRICULUM.md`; `docs/IMPROVEMENT_PLAN.md` uses the old numbers.
 - Prompts are versioned files under `labs/<id>/prompts/`; change one variable per run (prompting thread P1 to P5).
+- Platform facts about Claude Code, the Agent SDK and Antigravity are in `docs/PLATFORM_FACTS.md` (verified 2026-11-03). Re-verify before authoring a lab on them; do not trust memory for these fast-moving products.
 - `ClaudeBestPractices/` holds large snapshot docs. Grep for headings and read only the section you need.
 - `.claude/settings.json` denies bare `pip`/`python`, `uv add`, `uv pip` and reading `.env`, and asks before `git push`. `uv add` is denied outright, so the user runs it themselves after approving. Hooks (for example a Stop hook for ruff and mypy) are a Lab 27 deliverable, so nothing else is enforced yet.
 - Windows host: PowerShell or Git Bash. Files are LF (`.gitattributes`).
