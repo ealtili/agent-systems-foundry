@@ -15,7 +15,7 @@ The Evidence Ladder demands replayable trajectories (G3) and pass@k reliability 
 See `CURRICULUM.md`. Version every prompt as a file under `prompts/`, change one variable per run, and log the result in `STATE.md`.
 
 ## Spec v2 additions: evaluation rigor
-**Read first** (grep headings, do not read whole files): `ClaudeBestPractices/develop-tests.md` sections "Define your success criteria", "Build evaluations", "Grade your evaluations". Answer in `STATE.md` before coding:
+**Read first** (grep headings, do not read whole files): the "Develop tests" page (URL in `REFERENCES.md`), sections "Define your success criteria", "Build evaluations", "Grade your evaluations". Answer in `STATE.md` before coding:
 - When is pass^k (all k runs succeed) the right metric and pass@k (at least one of k) the wrong one?
 - Name three LLM-judge biases and one experiment that would expose each.
 - Why must the final score come from data you never tuned on?

@@ -13,7 +13,7 @@ This laboratory investigates Compiler-in-the-Loop Backpressure from first princi
 
 ## Spec v2 additions: verifier-guided revision
 Treat the compiler, linter and type checker as a **verifier** and measure the generation-verification gap.
-**Read first:** `ClaudeBestPractices/Claude Code-best-practices.md` section "Give Claude a check to run". Answer in `STATE.md`: why is checking often cheaper or more reliable than generating, and when is it not?
+**Read first:** the Claude Code "Best practices" page (URL in `REFERENCES.md`), section "Give Claude a check to run". Answer in `STATE.md`: why is checking often cheaper or more reliable than generating, and when is it not?
 
 **Deliverables (learner-owned):**
 1. Metric: success rate and iterations-to-green for one-shot generation vs revision with structured diagnostics (existing A/B) vs raw stderr.

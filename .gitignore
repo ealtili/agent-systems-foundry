@@ -42,6 +42,9 @@ htmlcov/
 .ruff_cache/
 .pyrit_memory/
 
+# Local offline reading copies (not redistributed)
+.local-docs/
+
 # Claude Code (personal/local state; shared config in .claude/ stays tracked)
 .claude/settings.local.json
 .claude/cache/
