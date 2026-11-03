@@ -1,0 +1,8 @@
+[
+  {"id": "tool-result-protocol", "question": "How must tool results be returned after an assistant turn with several tool_use blocks, and what ties each result to its call?", "hint": "All results in one user message, each tool_result carrying the matching tool_use_id."},
+  {"id": "model-visible-vs-harness-error", "question": "Which failures should be returned to the model as is_error results and which should crash the harness, and why?", "hint": "Bad arguments, unknown tools and expected domain errors are the model's to fix; a handler bug is yours and must not be hidden or leaked."},
+  {"id": "truncated-tool-call", "question": "Why must a tool_use block in a response that stopped with max_tokens never be executed?", "hint": "The input may be cut off mid-parameter yet still parse as a valid partial object."},
+  {"id": "schema-is-prompt-and-cache-key", "question": "Why must tool schemas be deterministic and sorted, and what do they cost every turn?", "hint": "Tools render first in the prompt, so any byte change invalidates the cache after them; they are input tokens on every request."},
+  {"id": "loop-bounds", "question": "What two bounds does a tool loop need, and why check them before each model call?", "hint": "max turns and a deadline; otherwise a confused model can loop forever on your budget."},
+  {"id": "descriptions-teach-restraint", "question": "Why should tool descriptions say when not to call the tool, and how does the selection benchmark measure that?", "hint": "Models over- or under-call tools based on trigger wording; negative cases (no tool expected) expose over-calling."}
+]

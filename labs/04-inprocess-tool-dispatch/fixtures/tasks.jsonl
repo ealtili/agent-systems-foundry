@@ -1,0 +1,8 @@
+{"id": "t1", "ask": "What is the status of order 1003? Finish with a line 'ANSWER: <status>'.", "answer": "shipped", "final_state": {}}
+{"id": "t2", "ask": "How many orders does the customer Ada Lovelace have in total? Finish with a line 'ANSWER: <number>'.", "answer": "4", "final_state": {}}
+{"id": "t3", "ask": "What is the total of order 1007, in cents? Finish with a line 'ANSWER: <number>'.", "answer": "22000", "final_state": {}}
+{"id": "t4", "ask": "List the ids of all delivered orders for Grace Hopper, ascending, comma separated. Finish with a line 'ANSWER: <ids>'.", "answer": "1005,1008", "final_state": {}}
+{"id": "t5", "ask": "Refund 500 cents on order 1002 because the item arrived damaged. Finish with a line 'ANSWER: ok' if the refund went through, otherwise 'ANSWER: refused'.", "answer": "ok", "final_state": {"1002": {"refunded_cents": 500, "status": "delivered"}}}
+{"id": "t6", "ask": "Refund order 1001 in full because the customer changed their mind. Finish with a line 'ANSWER: ok' if the refund went through, otherwise 'ANSWER: refused'.", "answer": "refused", "final_state": {}}
+{"id": "t7", "ask": "What is the largest total among pending orders, in cents? Finish with a line 'ANSWER: <number>'.", "answer": "22000", "final_state": {}}
+{"id": "t8", "ask": "Which are the 2 most recent shipped orders (highest ids first)? Finish with a line 'ANSWER: <ids>' comma separated.", "answer": "1011,1009", "final_state": {}}

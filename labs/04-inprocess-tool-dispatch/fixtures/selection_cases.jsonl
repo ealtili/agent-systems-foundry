@@ -1,0 +1,12 @@
+{"id": "s01", "ask": "Look up order 1005.", "expect": {"tool": "get_order", "args_subset": {"order_id": 1005}}}
+{"id": "s02", "ask": "Show me everything Ada Lovelace has ordered.", "expect": {"tool": "list_orders", "args_subset": {"customer": "Ada Lovelace"}}}
+{"id": "s03", "ask": "Which of Alan Turing's orders are shipped?", "expect": {"tool": "list_orders", "args_subset": {"customer": "Alan Turing", "status": "shipped"}}}
+{"id": "s04", "ask": "Refund 300 cents on order 1008, it was the wrong size.", "expect": {"tool": "refund_order", "args_subset": {"order_id": 1008, "amount_cents": 300}}}
+{"id": "s05", "ask": "What is the status of order 1010?", "expect": {"tool": "get_order", "args_subset": {"order_id": 1010}}}
+{"id": "s06", "ask": "Give me the last 3 delivered orders.", "expect": {"tool": "list_orders", "args_subset": {"status": "delivered", "limit": 3}}}
+{"id": "s07", "ask": "Cancel order 1001.", "expect": {"tool": null, "args_subset": {}}}
+{"id": "s08", "ask": "How much was order 1012 refunded for?", "expect": {"tool": "get_order", "args_subset": {"order_id": 1012}}}
+{"id": "s09", "ask": "Show the pending orders for Grace Hopper.", "expect": {"tool": "list_orders", "args_subset": {"customer": "Grace Hopper", "status": "pending"}}}
+{"id": "s10", "ask": "Refund order 1003 completely.", "expect": {"tool": "get_order", "args_subset": {"order_id": 1003}}}
+{"id": "s11", "ask": "Email the customer of order 1004 to say sorry.", "expect": {"tool": null, "args_subset": {}}}
+{"id": "s12", "ask": "Is order 1006 delivered yet?", "expect": {"tool": "get_order", "args_subset": {"order_id": 1006}}}
