@@ -1,6 +1,6 @@
 # Lab 03: Context Cost & Prompt Caching Dynamics — State
 
-- **Current Status:** Not Started
+- **Current Status:** Not Started (authored: spec, fixtures, pricing/prefix/health contract tests)
 - **Active Mode:** Mode A (Guided)
 - **Mastery Dimensions:**
   - [ ] **E (Explain):** Mechanism and trade-offs understood.
@@ -19,6 +19,6 @@
 - [ ] G1 Static: `uv run ruff check labs/03-context-cost-caching`
 - [ ] G1 Static: `uv run mypy --strict labs/03-context-cost-caching`
 - [ ] G2 Functional: `uv run pytest labs/03-context-cost-caching/tests`
-- [ ] G3 Behavioral: Trajectory assertions verified
-- [ ] G5 Budget: In-budget verification
+- [ ] G3 Replay: `analyze.py` reproduces results from recorded rows
+- [ ] G6 Budget: spend under the estimate you approved
 - [ ] G7 Defense: Passed `/defend`

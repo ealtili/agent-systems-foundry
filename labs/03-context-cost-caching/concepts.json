@@ -1,0 +1,8 @@
+[
+  {"id": "cache-prefix-match", "question": "Why does changing one byte early in a prompt invalidate every cached block after it, and in what order are tools, system and messages rendered?", "hint": "The cache key is the exact bytes of the prefix up to a breakpoint. Render order is tools, then system, then messages."},
+  {"id": "usage-total-prompt", "question": "How do you reconstruct the total prompt size from the usage fields, and why can input_tokens alone mislead you?", "hint": "input_tokens is only the uncached remainder; add cache_read_input_tokens and the creation fields."},
+  {"id": "cache-breakeven", "question": "With a 1.25x five-minute write and 0.1x reads, how many requests until caching is cheaper, and why does the one-hour TTL need more?", "hint": "1.25 + 0.1 = 1.35 beats 2; the 2x write needs a third request (2.2 beats 3)."},
+  {"id": "silent-invalidator", "question": "Name three things that silently break a cache prefix, and the usage signature you would see.", "hint": "Timestamps/UUIDs, unordered serialization, per-user content or tools early in the prompt. Signature: cache creation every turn, reads near zero."},
+  {"id": "below-minimum-no-error", "question": "What happens when the prefix is shorter than the model's minimum cacheable size?", "hint": "No error: the marker is ignored and cache_creation_input_tokens is 0. Check the usage fields, not the status code."},
+  {"id": "history-edit-misses", "question": "Why does editing an earlier turn before replaying history cost you the cache from that point on?", "hint": "Prefix match: everything after the first changed byte is a different prefix."}
+]

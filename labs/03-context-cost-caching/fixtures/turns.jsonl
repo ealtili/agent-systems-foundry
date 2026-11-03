@@ -1,0 +1,10 @@
+{"turn": 1, "question": "According to rule 5, what is the limit for tier 3 requests? Answer with the number only.", "answer": "45"}
+{"turn": 2, "question": "Which team reviews rule 12? Answer with the team name only.", "answer": "finance"}
+{"turn": 3, "question": "According to rule 23, what is the limit for tier 3 requests? Answer with the number only.", "answer": "171"}
+{"turn": 4, "question": "Which team reviews rule 31? Answer with the team name only.", "answer": "operations"}
+{"turn": 5, "question": "According to rule 40, what is the limit for tier 2 requests? Answer with the number only.", "answer": "290"}
+{"turn": 6, "question": "Which team reviews rule 47? Answer with the team name only.", "answer": "security"}
+{"turn": 7, "question": "According to rule 52, what is the limit for tier 2 requests? Answer with the number only.", "answer": "374"}
+{"turn": 8, "question": "Which team reviews rule 58? Answer with the team name only.", "answer": "platform"}
+{"turn": 9, "question": "According to rule 3, what is the limit for tier 1 requests? Answer with the number only.", "answer": "31"}
+{"turn": 10, "question": "Which team reviews rule 29? Answer with the team name only.", "answer": "security"}
