@@ -1,6 +1,6 @@
 # CURRICULUM.md — Agent Engineering & Systems Track Catalog (ordered)
 
-Capability coverage and planned gaps: `docs/CAPABILITY_MATRIX.md`.
+Capability coverage and planned gaps: `docs/CAPABILITY_MATRIX.md`. Authoring status (Labs 01-05 fully authored, the rest spec-only) is in the `README.md` status table; the descriptions below are the curriculum, not a promise that a lab is authored.
 
 Labs are listed in **study order**; the track tag is a topic label, not a contiguous block. Mastery requires reaching **Level 6** (Explain, Build, Debug, Attack, Evaluate, Choose).
 
@@ -8,10 +8,10 @@ Ordering rationale: capability security (07) and the replay/pass@k harness (08) 
 
 - **Lab 01: Request-Response Lifecycle & Structured Output** `[Track A]` Raw completions vs. enforced JSON schemas, schema rejection recovery, and latency/cost baselines. Every external call carries an explicit timeout from day one. **Prompting thread P1:** versioned extraction prompt; one-variable prompt change vs schema layer.
 - **Lab 02: Inference Controls & Observable Reasoning Artifacts** `[Track A]` Effort and adaptive thinking (sampling parameters no longer exist), run-to-run variance, and whether typed artifacts (plan, evidence, confidence) make reasoning observable and confidence calibrated. **Prompting thread P2:** prompt anatomy (role, instructions, examples, output format); A/B one instruction change per run and keep a versioned prompt log.
-- **Lab 03: Context Cost & Prompt Caching Dynamics** `[Track A]` Multi-turn token economics, ephemeral cache breakpoints (`cache_control`), cache eviction mechanics, and cost profiling.
-- **Lab 04: In-Process Tool Execution & ACI Design** `[Track B]` Tool schema design, parameter ergonomics, type coercion, dynamic registries, and deterministic error reporting. Includes the minimal tool-use loop (model -> tool -> result -> model) that Labs 09+ build on. **Prompting thread P3:** tool name/description/parameter docs are prompts; measure tool-selection accuracy as tool descriptions change.
-- **Lab 05: Deadlines, Cancellation & Defensive Dispatch** `[Track B]` Cooperative task cancellation, deadline propagation across tool chains, exponential backoff, and circuit breakers.
-- **Lab 06: Model Context Protocol (MCP) Foundations** `[Track B]` Decoupling tools from runtime; building stdio & HTTP/SSE MCP servers, dynamic resources, and client lifecycles.
+- **Lab 03: Context Cost & Prompt Caching Dynamics** `[Track A]` Multi-turn token economics, prefix-match caching and `cache_control` breakpoints, TTL break-even, silent-invalidator detection, and a cost model built from the usage fields.
+- **Lab 04: In-Process Tool Execution & ACI Design** `[Track B]` Tool schema design, parameter ergonomics, type coercion, dynamic registries, and deterministic error reporting. Includes the minimal tool-use loop (model -> tool -> result -> model), tested against a scripted fake model, that Labs 09+ build on. **Prompting thread P3:** tool name/description/parameter docs are prompts; measure tool-selection accuracy as tool descriptions change.
+- **Lab 05: Deadlines, Cancellation & Defensive Dispatch** `[Track B]` Deadline propagation, retries that spend from a budget (including server `Retry-After`), cooperative cancellation, circuit breakers and bounded fan-out, tested by injecting faults into the real SDK offline.
+- **Lab 06: Model Context Protocol (MCP) Foundations** `[Track B]` Decoupling tools from runtime; building stdio and HTTP MCP servers (verify which HTTP transport the current MCP spec and SDKs support before authoring; legacy SSE may be superseded), dynamic resources, and client lifecycles.
 - **Lab 07: Capability-Based Security & Untrusted Ingestion** `[Track F]` Principle of least privilege, input sanitization, and taint tracking across multi-hop tool calls.
 - **Lab 08: Replay Harness & pass@k Evaluation** `[Track C]` Record/replay trajectories and compute pass@k over N runs: the minimal G3/G5 tooling used by all later labs. **Prompting thread P4:** every prompt change ships with an eval; catch a deliberately introduced prompt regression with replay + pass@k. **v2:** pass^k, dev/test split and contamination check, calibrated LLM-as-judge.
 - **Lab 09: Compiler-in-the-Loop Backpressure** `[Track C]` AST-aware file patching, capturing LSP/linter/typechecker diagnostics, and injecting targeted feedback into observation state. **v2:** verifier-guided revision and a verifier-gaming detector.
@@ -24,7 +24,7 @@ Ordering rationale: capability security (07) and the replay/pass@k harness (08) 
 - **Lab 16: AST Codebase Graphs & Hybrid GraphRAG** `[Track D]` Tree-sitter symbol/call graph indexing, structural dependency traversal, and combining vector similarity with topological graph queries.
 - **Lab 17: Scoped Rules, Slash Commands & Multi-File Refactoring** `[Track G]` YAML `paths:` frontmatter targeting, interactive commands, and atomic multi-file refactoring patterns.
 - **Lab 18: Progressive Disclosure Skills (`SKILL.md`)** `[Track G]` Authoring skills with frontmatter triggers, executable `scripts/`, lazy-loaded references, and zero idle token overhead.
-- **Lab 19: Custom Subagents & Context Isolation** `[Track G]` Designing specialist subagents (`.claude/agents/`), restricting `allowed-tools`, and structured handoff economics.
+- **Lab 19: Custom Subagents & Context Isolation** `[Track G]` Designing specialist subagents (`.claude/agents/`), restricting the `tools:` list, and structured handoff economics.
 - **Lab 20: Hierarchical Supervisor & Peer Handoff Swarms** `[Track E]` Top-down delegation vs. decentralized peer-to-peer transfers, hop-count livelock breakers, and cycle detection.
 - **Lab 21: Shared Blackboard Architectures** `[Track E]` Event-driven pub/sub shared state, optimistic concurrency control (`version_id`), and conflict resolution.
 - **Lab 22: Multi-Agent Consensus & Worktree Swarms** `[Track E]` Contract-Net task bidding, Red-vs-Blue-vs-Judge debate, and parallel coding swarms executing across isolated `git worktree` sandboxes.

@@ -38,12 +38,12 @@ Applicable rungs of the Evidence Ladder (`ARCHITECTURE.md` §4): G1 static, G2 f
 
 ## Gotchas
 - `.local-reference/` (git-ignored, absent from the public repo) is the examiner-only oracle (`foundry_oracle`, archived Lab 01 solution, `drills/`). Never copy from it into `src/` or `labs/`, never quote it to the user, and open `.local-reference/drills/` only during `/drill`. `src/foundry/` starts empty on purpose.
-- Tests of Labs 01-05 fail on purpose until the user implements their stubs (`PlanExtractor`, Lab 02 `scoring`, Lab 03 `pricing`/`prefix`/`health`, Lab 04 `registry`/`dispatch`/`loop`/`scoring`, Lab 05 `deadline`/`backoff`/`retry`/`classify`/`breaker`/`fanout`). Do not make them pass. Do not make them pass.
+- Tests of Labs 01-05 fail on purpose until the user implements their stubs (`PlanExtractor`, Lab 02 `scoring`, Lab 03 `pricing`/`prefix`/`health`, Lab 04 `registry`/`dispatch`/`loop`/`scoring`, Lab 05 `deadline`/`backoff`/`retry`/`classify`/`breaker`/`fanout`). Do not make them pass.
 - Run lab tests one lab at a time: each lab has its own `src` package.
 - Never hand-edit `[*]` in `PROGRESS.md`; only `scripts/gate.py --mark` sets it. Review state lives in `.foundry/concepts_state.json` (use `scripts/concepts.py`).
-- Labs follow the renumbered order in `CURRICULUM.md`; `docs/IMPROVEMENT_PLAN.md` uses the old numbers.
+- Labs follow the renumbered order in `CURRICULUM.md`. Older notes and commit messages may use the old numbers. Only Labs 01-05 are fully authored; `docs/LAB_TEMPLATE.md` has the authoring checklist, and `/start-lab` step 0 follows it for unauthored labs.
 - Prompts are versioned files under `labs/<id>/prompts/`; change one variable per run (prompting thread P1 to P5).
-- Platform facts about Claude Code, the Agent SDK and Antigravity are in `docs/PLATFORM_FACTS.md` (verified 2026-11-03). Re-verify before authoring a lab on them; do not trust memory for these fast-moving products.
+- Platform facts about Claude Code, the Agent SDK and Antigravity are in `docs/PLATFORM_FACTS.md` (verified 2026-11-03; section 6 holds the Claude API and SDK facts the authored labs rely on). Re-verify before authoring a lab on them; do not trust memory for these fast-moving products.
 - Reference reading is linked in `REFERENCES.md` (not copied into the repo). Optional offline copies live in the git-ignored `.local-docs/`; grep headings and read only the section you need.
 - `.claude/settings.json` denies bare `pip`/`python`, `uv add`, `uv pip` and reading `.env`, and asks before `git push`. `uv add` is denied outright, so the user runs it themselves after approving. Hooks (for example a Stop hook for ruff and mypy) are a Lab 27 deliverable, so nothing else is enforced yet.
 - Windows host: PowerShell or Git Bash. Files are LF (`.gitattributes`).

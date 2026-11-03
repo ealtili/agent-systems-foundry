@@ -4,6 +4,8 @@ Links to the official documentation this course draws on. The pages are Anthropi
 
 For offline reading, save your own copies in `.local-docs/` (git-ignored).
 
+Not every URL below has been opened. Each authored lab README marks which of its sources were checked (✔) and how; treat the rest as pointers to confirm.
+
 | Page | URL | Used by |
 | :--- | :--- | :--- |
 | Best practices for Claude Code | https://code.claude.com/docs/en/best-practices | Lab 09 (give Claude a check to run), Labs 17-19, 27-29; the deterministic vs non-deterministic instruction table frames the course thesis |
@@ -19,4 +21,10 @@ For offline reading, save your own copies in `.local-docs/` (git-ignored).
 | Reduce hallucinations | https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations | Lab 01, Lab 23 |
 | Develop tests (define success criteria, build and grade evals) | https://platform.claude.com/docs/en/test-and-evaluate/develop-tests | Lab 08, Lab 34 |
 | Structured outputs / API errors / pricing | https://platform.claude.com/docs/en/build-with-claude/structured-outputs.md , https://platform.claude.com/docs/en/api/errors.md , https://platform.claude.com/docs/en/about-claude/pricing.md | Lab 01 |
+| Effort parameter / adaptive thinking | https://platform.claude.com/docs/en/build-with-claude/effort.md , https://platform.claude.com/docs/en/build-with-claude/adaptive-thinking.md | Lab 02 |
+| Prompt caching / token counting | https://platform.claude.com/docs/en/build-with-claude/prompt-caching.md , https://platform.claude.com/docs/en/build-with-claude/token-counting.md | Lab 03 |
+| Tool use overview | https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview | Lab 04 (and the Agent SDK tool labs 31-32) |
+| Python `asyncio`: Coroutines and Tasks (timeouts, TaskGroup, cancellation) | https://docs.python.org/3/library/asyncio-task.html | Lab 05 |
+| Exponential Backoff and Jitter (AWS Architecture Blog) | https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/ | Lab 05 |
+| CircuitBreaker (Martin Fowler) | https://martinfowler.com/bliki/CircuitBreaker.html | Lab 05 |
 | Antigravity docs | https://antigravity.google/docs/features/ , https://antigravity.google/docs/sdk/overview/ | Planned second-runtime lab |

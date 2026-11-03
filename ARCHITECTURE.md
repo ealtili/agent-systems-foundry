@@ -64,7 +64,7 @@ We measure mastery across six concrete capabilities:
 A compiling agent is not a correct agent. We verify agent reliability through a progressive ladder:
 - **G1 Static:** Type safety (`mypy --strict`) and clean formatting (`ruff`).
 - **G2 Functional:** Unit tests verifying tool logic, schema validation, and state transforms.
-- **G3 Behavioral:** Recorded trajectory replays confirming expected tool-call sequences and recovery loops.
+- **G3 Behavioral:** Recorded trajectory replays (or scripted fakes and injected faults) confirming expected tool-call sequences and recovery loops.
 - **G4 Security:** Input sanitization, taint tracking, and canary exfiltration regression tests.
 - **G5 Reliability:** Repeated stochastic evaluations over $N$ runs (measuring $pass@k$ and failure modes).
 - **G6 Budget:** Ceiling assertions on token usage, latency, and monetary spend.
@@ -80,3 +80,17 @@ Every lab is paired with a control experiment to quantify why the architectural 
 - **Swarm Concurrency:** Shared working tree edits vs. Isolated `git worktree` sandboxes.
 - **Loop Termination:** Naive step counter vs. `ProgressMonitor` with cycle detection.
 - **Security Boundaries:** Natural language prompt admonitions vs. Deterministic input sanitization hooks.
+- **Prompt Caching:** No cache vs. a breakpoint on the stable prefix, plus a deliberate silent invalidator (a timestamp in the system prompt) to see what a broken cache looks like in the usage fields.
+- **Tool Interface:** A loose command string parsed by regex vs. typed tool schemas validated at the boundary, with deterministic model-visible errors.
+- **Time Budget:** SDK retries alone vs. a propagated deadline with retries that spend from it and a circuit breaker, under injected faults.
+
+---
+
+## 6. Offline-First Measurement
+Replay before live (the `eval-standards` rule) is a design principle, not a convenience:
+- **Pure cores:** the learner's logic is written as functions with injectable clocks, sleepers and random sources, so contract tests need no API and no real waiting.
+- **Fake models and fault injection:** a scripted fake model exercises the tool loop (Lab 04); a fault-injecting transport under the real SDK exercises retries, `Retry-After` and timeouts offline and for free (Lab 05).
+- **Characterization tests:** given tests pin what the platform actually does (SDK retry and timeout behavior, API shapes), so a dependency upgrade fails a test before it changes a result.
+- **Live runs are the last rung:** they need approval above the token threshold in `CLAUDE.md`, and each lab states what it spends.
+
+A contract test is only trustworthy once it has passed against a reference implementation. Authored labs are checked that way, with the reference kept out of the repo (see `docs/LAB_TEMPLATE.md`).
