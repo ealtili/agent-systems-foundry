@@ -1,29 +1,15 @@
 from __future__ import annotations
 
-import json
-
-from pydantic import ValidationError
-
 from .schema import StructuredPlan
 
 
 class PlanExtractor:
-    """Extracts and validates structured plan objects from model output."""
+    """TODO(you): extract and validate a StructuredPlan from raw model output.
+
+    Contract to design yourself: how fences, truncation and schema errors are
+    reported. The signature below is only a placeholder.
+    """
 
     @staticmethod
     def parse_raw_json(raw_text: str) -> tuple[StructuredPlan | None, str | None]:
-        clean_text = raw_text.strip()
-        if clean_text.startswith("```json"):
-            clean_text = clean_text[7:]
-        if clean_text.startswith("```"):
-            clean_text = clean_text[3:]
-        if clean_text.endswith("```"):
-            clean_text = clean_text[:-3]
-        clean_text = clean_text.strip()
-
-        try:
-            data = json.loads(clean_text)
-            plan = StructuredPlan.model_validate(data)
-            return plan, None
-        except (json.JSONDecodeError, ValidationError) as err:
-            return None, str(err)
+        raise NotImplementedError("Lab 01: you write this.")

@@ -24,8 +24,8 @@ Claude Agent Foundry is not a set of passive tutorials. It is an active flight s
 ## Repository Layout
 
 ```text
-├── CLAUDE.md                     # Lean root control plane (< 100 lines)
-├── PROGRESS.md                   # 6-Dimension Mastery Grid (< 50 lines)
+├── CLAUDE.md                     # Lean root control plane
+├── PROGRESS.md                   # 6-Dimension Mastery Grid 
 ├── CURRICULUM.md                 # 35-Lab Catalog across Tracks A to I
 ├── ARCHITECTURE.md               # Core thesis, learning loop & Evidence Ladder
 ├── pyproject.toml                # uv workspace configuration
@@ -35,7 +35,9 @@ Claude Agent Foundry is not a set of passive tutorials. It is an active flight s
 │   ├── skills/                   # On-demand workflows (/start-lab, /drill, /defend, etc.)
 │   ├── agents/                   # Context-isolated subagents (architect, reviewer, redteam)
 │   └── commands/                 # Native Claude Code slash commands
-├── src/foundry/                  # Core deterministic harness & state engine
+├── src/foundry/                  # YOUR harness package (built lab by lab; starts empty)
+├── reference/                    # Hidden oracle: used by /drill, never a starting point
+├── scripts/gate.py               # Deterministic mastery gate (only writer of [*])
 └── labs/                         # 35 Hands-on experimental laboratories
 ```
 
@@ -52,7 +54,8 @@ cd claude-agent-foundry
 uv sync
 
 # 3. Verify baseline test suite
-uv run pytest labs/01-model-request-response/tests -v
+uv run pytest                      # oracle + tooling: must be green
+uv run pytest labs/01-model-request-response/tests -v   # RED by design until YOU implement Lab 01
 uv run ruff check .
 uv run mypy src tests labs
 

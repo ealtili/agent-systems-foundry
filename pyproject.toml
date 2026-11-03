@@ -6,20 +6,19 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "anthropic>=0.40.0",
-    "claude-agent-sdk>=0.1.0",
     "pydantic>=2.10.0",
     "pydantic-settings>=2.0.0",
     "httpx>=0.28.0",
-    "tree-sitter>=0.23.0",
-    "networkx>=3.4.0",
-    "playwright>=1.49.0",
-    "pyrit>=0.4.0",
-    "opentelemetry-api>=1.29.0",
-    "opentelemetry-sdk>=1.29.0",
     "python-dotenv>=1.0.1",
 ]
 
 [dependency-groups]
+# Install a track's extras only when you reach it: uv sync --group track-d
+track-d = ["tree-sitter>=0.23.0", "networkx>=3.4.0"]          # Lab 14
+track-e = ["playwright>=1.49.0"]                              # Lab 18
+track-f = ["pyrit>=0.4.0"]                                    # Lab 21
+track-h = ["claude-agent-sdk>=0.1.0"]                         # Labs 29-32
+track-i = ["opentelemetry-api>=1.29.0", "opentelemetry-sdk>=1.29.0"]  # Lab 34
 dev = [
     "pytest>=8.3.0",
     "pytest-asyncio>=0.25.0",
@@ -46,13 +45,15 @@ ignore = ["E501"]
 python_version = "3.12"
 strict = true
 warn_unused_configs = true
+exclude = ["reference/lab01_solution"]
 disallow_untyped_defs = true
 disallow_any_generics = true
 check_untyped_defs = true
 
 [tool.pytest.ini_options]
 minversion = "8.0"
-testpaths = ["tests", "labs"]
+testpaths = ["tests", "reference/tests"]
+pythonpath = ["reference", "src"]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "function"
 markers = [

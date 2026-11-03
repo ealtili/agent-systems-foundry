@@ -16,5 +16,5 @@ When the user runs `/finish-lab`:
    - V (Evaluate)
    - C (Choose)
 3. Prompt the user for their final architectural takeaway and record it in `labs/<active_lab>/STATE.md`.
-4. Update `PROGRESS.md` status to `[*]` Mastered.
+4. Run `uv run python scripts/gate.py <lab> --mark`. Only a passing gate may set `[*]` in `PROGRESS.md`; never edit it by hand.
 5. Advance the active pointer in `PROGRESS.md` to the next lab in `CURRICULUM.md`.

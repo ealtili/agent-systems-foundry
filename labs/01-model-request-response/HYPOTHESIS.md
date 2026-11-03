@@ -10,5 +10,4 @@
   - Parsing failure rate (%)
   - Output token count (overhead delta)
   - Round-trip latency (ms)
-- **Predicted Hypothesis:**
-  Enforcing strict Pydantic JSON schemas eliminates parse errors entirely (0% error rate) at an expense of ~15% token overhead and ~10% latency increase due to schema formatting.
+- **Predicted Hypothesis:** *Intentionally blank.* Your prediction and reasoning go in `STATE.md` via `/start-lab`, BEFORE any measurement. No pre-filled numbers.

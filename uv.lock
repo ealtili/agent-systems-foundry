@@ -680,17 +680,10 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "anthropic" },
-    { name = "claude-agent-sdk" },
     { name = "httpx" },
-    { name = "networkx" },
-    { name = "opentelemetry-api" },
-    { name = "opentelemetry-sdk" },
-    { name = "playwright" },
     { name = "pydantic" },
     { name = "pydantic-settings" },
-    { name = "pyrit" },
     { name = "python-dotenv" },
-    { name = "tree-sitter" },
 ]
 
 [package.dev-dependencies]
@@ -700,21 +693,31 @@ dev = [
     { name = "pytest-asyncio" },
     { name = "ruff" },
 ]
+track-d = [
+    { name = "networkx" },
+    { name = "tree-sitter" },
+]
+track-e = [
+    { name = "playwright" },
+]
+track-f = [
+    { name = "pyrit" },
+]
+track-h = [
+    { name = "claude-agent-sdk" },
+]
+track-i = [
+    { name = "opentelemetry-api" },
+    { name = "opentelemetry-sdk" },
+]
 
 [package.metadata]
 requires-dist = [
     { name = "anthropic", specifier = ">=0.40.0" },
-    { name = "claude-agent-sdk", specifier = ">=0.1.0" },
     { name = "httpx", specifier = ">=0.28.0" },
-    { name = "networkx", specifier = ">=3.4.0" },
-    { name = "opentelemetry-api", specifier = ">=1.29.0" },
-    { name = "opentelemetry-sdk", specifier = ">=1.29.0" },
-    { name = "playwright", specifier = ">=1.49.0" },
     { name = "pydantic", specifier = ">=2.10.0" },
     { name = "pydantic-settings", specifier = ">=2.0.0" },
-    { name = "pyrit", specifier = ">=0.4.0" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
-    { name = "tree-sitter", specifier = ">=0.23.0" },
 ]
 
 [package.metadata.requires-dev]
@@ -723,6 +726,17 @@ dev = [
     { name = "pytest", specifier = ">=8.3.0" },
     { name = "pytest-asyncio", specifier = ">=0.25.0" },
     { name = "ruff", specifier = ">=0.8.0" },
+]
+track-d = [
+    { name = "networkx", specifier = ">=3.4.0" },
+    { name = "tree-sitter", specifier = ">=0.23.0" },
+]
+track-e = [{ name = "playwright", specifier = ">=1.49.0" }]
+track-f = [{ name = "pyrit", specifier = ">=0.4.0" }]
+track-h = [{ name = "claude-agent-sdk", specifier = ">=0.1.0" }]
+track-i = [
+    { name = "opentelemetry-api", specifier = ">=1.29.0" },
+    { name = "opentelemetry-sdk", specifier = ">=1.29.0" },
 ]
 
 [[package]]
