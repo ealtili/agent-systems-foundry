@@ -1,0 +1,40 @@
+# Normalize line endings independent of each contributor's core.autocrlf.
+# Anything not listed is auto-detected as text/binary and stored as LF.
+* text=auto
+
+# Source, config and docs: LF everywhere (frontmatter in skills/agents/rules and
+# byte-exact replay fixtures must not pick up CRLF on Windows checkouts).
+*.py      text eol=lf
+*.pyi     text eol=lf
+*.md      text eol=lf
+*.toml    text eol=lf
+*.yaml    text eol=lf
+*.yml     text eol=lf
+*.json    text eol=lf
+*.jsonl   text eol=lf
+*.txt     text eol=lf
+*.cfg     text eol=lf
+*.ini     text eol=lf
+*.sh      text eol=lf
+.gitignore     text eol=lf
+.gitattributes text eol=lf
+.env.example   text eol=lf
+
+# Windows-only scripts keep CRLF.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary artifacts: never diff, merge or convert.
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.pdf    binary
+*.zip    binary
+*.duckdb binary
+
+# Generated / reference material: collapse in diffs, exclude from language stats.
+uv.lock                    -diff linguist-generated=true
+ClaudeBestPractices/**     linguist-documentation=true
+reference/**               linguist-documentation=true

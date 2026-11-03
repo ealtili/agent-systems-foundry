@@ -66,5 +66,6 @@ claude
 Inside Claude Code:
 - `/start-lab 01` — Scaffolds hypothesis, requires your prediction, and sets up the active lab.
 - `/drill` — Injects intentional chaos, hidden harness defects, or adversarial payloads.
-- `/verify` — Evaluates code against the 5-gate verification ladder.
+- `/ladder` — Runs the Evidence Ladder against the active lab (ruff, mypy, pytest, gate.py).
+- `/audit` — Fresh read-only reviewer checks uncommitted changes against CLAUDE.md invariants.
 - `/defend 01` — Conducts a 5-question oral architectural defense to qualify for `MASTERED` status.

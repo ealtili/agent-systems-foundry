@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(pip *)",
+      "Bash(pip3 *)",
+      "Bash(python *)",
+      "Bash(python3 *)",
+      "Bash(uv add *)",
+      "Bash(uv pip *)",
+      "Read(./.env)",
+      "Read(./.env.local)"
+    ],
+    "ask": [
+      "Bash(git push *)"
+    ]
+  }
+}

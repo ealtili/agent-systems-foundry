@@ -42,9 +42,40 @@ htmlcov/
 .ruff_cache/
 .pyrit_memory/
 
-# Claude Code & IDE
+# Claude Code (personal/local state; shared config in .claude/ stays tracked)
+.claude/settings.local.json
 .claude/cache/
 .claude/sessions/
-*.local
+.claude/worktrees/
+CLAUDE.local.md
+*.local.md
+
+# Lab runtime artifacts (recorded fixtures live in labs/*/fixtures/ and ARE tracked)
+labs/*/runs/
+labs/*/.runs/
+.shadow-git/
+.worktrees/
+traces/
+.otel/
+*.duckdb
+*.duckdb.wal
+*.tmp
+
+# Learner state under .foundry/ (concepts_state.json) is intentionally TRACKED:
+# it is your progress record. Ignore only scratch files there.
+.foundry/*.tmp
+
+# Extra Python/tooling caches
+.hypothesis/
+.ipynb_checkpoints/
+coverage.xml
+.coverage.*
+.uv-cache/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+desktop.ini
 .vscode/
 .idea/
+*.swp
