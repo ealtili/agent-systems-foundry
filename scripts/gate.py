@@ -72,6 +72,10 @@ def main() -> int:
                 lines[i] = "|".join(cells)
         progress.write_text("\n".join(lines) + "\n", encoding="utf-8")
         print(f"PROGRESS.md updated for lab {number}")
+        if (lab / "concepts.json").exists() and run(
+            ["uv", "run", "python", "scripts/concepts.py", "add", lab.name]
+        ):
+            print("concepts registered for spaced repetition")
     return 0
 
 

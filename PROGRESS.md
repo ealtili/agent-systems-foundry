@@ -60,3 +60,12 @@
 | **33** | Hermetic Multi-Tenant SDK Sandboxing | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
 | **34** | Trajectory Evals & OpenTelemetry Spans | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
 | **35** | Capstone: Zero-Trust Autonomous SWE Agent | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | `[ ]` |
+
+## Prompting Thread (cross-lab)
+| Checkpoint | Lab | Evidence | Status |
+| :--- | :---: | :--- | :---: |
+| P1 | 01 | versioned prompt + one-variable change logged | `[ ]` |
+| P2 | 02 | prompt-anatomy A/B | `[ ]` |
+| P3 | 04 | tool-description quality measured | `[ ]` |
+| P4 | 08 | prompt regression caught by eval | `[ ]` |
+| P5 | 14 | planner/critic prompt vs control-flow fix | `[ ]` |

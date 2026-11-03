@@ -1,0 +1,7 @@
+[
+  {"id": "prompt-cannot-guarantee-json", "question": "Why can a prompt that says 'return valid JSON' never guarantee valid JSON, and which layer must own that guarantee?", "hint": "Sampling is stochastic; guarantees belong to a deterministic boundary."},
+  {"id": "max-tokens-truncation", "question": "What does stop_reason == 'max_tokens' imply for a JSON response, and why must you check it before parsing?", "hint": "The text is cut mid-structure; parse errors are a symptom, not the cause."},
+  {"id": "timeout-retry-wallclock", "question": "With client timeout T seconds and max_retries R, what is the worst-case wall-clock of one logical call, and which CLAUDE.md invariant does this affect?", "hint": "Timeouts are retried: T x (R+1) plus backoff. Deadlines must bound the whole operation."},
+  {"id": "validate-after-provider-schema", "question": "If the provider already enforces a JSON schema, why do you still validate with Pydantic at your boundary?", "hint": "Your invariants and the trust boundary are yours, not the provider's; schema support is a subset."},
+  {"id": "usage-fields-cost", "question": "Which response.usage fields convert a call into dollars, and what do the cache_* fields tell you?", "hint": "input_tokens, output_tokens; cache creation vs read are priced differently."}
+]

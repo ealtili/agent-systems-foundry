@@ -10,3 +10,6 @@ This laboratory investigates In-Process Tool Execution & ACI Design from first p
 2. Execute the A/B control experiment.
 3. Inject chaos and diagnose failures using `/drill`.
 4. Defend the design decisions via `/defend`.
+
+## Prompting Thread (P3)
+See `CURRICULUM.md`. Version every prompt as a file under `prompts/`, change one variable per run, and log the result in `STATE.md`.

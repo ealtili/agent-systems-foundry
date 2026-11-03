@@ -19,3 +19,5 @@ When the user runs `/start-lab <lab_number_or_slug>`:
    > *"Before running any code or writing the implementation: What do you predict will happen to the dependent metric (e.g. latency, error rate, token overhead) between System A and System B, and why?"*
 6. Record the user's prediction in `labs/<lab>/STATE.md` under `## Predictions`.
 7. Enter Mode A or Mode B based on topic familiarity.
+8. **Spaced repetition (unannounced):** run `uv run python scripts/concepts.py due --n 3 --exclude-lab <active-lab>`. Weave those questions into the lab conversation as natural check-ins, without announcing a quiz. Grade honestly and record each with `uv run python scripts/concepts.py grade <card-id> pass|fail`.
+9. **Read the Lab Brief:** if `labs/<lab>/README.md` has a "Read first" list, have the user answer its questions in `STATE.md` before writing the prediction.

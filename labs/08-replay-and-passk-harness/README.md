@@ -10,3 +10,6 @@ The Evidence Ladder demands replayable trajectories (G3) and pass@k reliability 
 2. Compute pass@k over N stochastic runs.
 3. Execute the A/B control experiment (single run vs pass@k).
 4. Defend the design via `/defend`.
+
+## Prompting Thread (P4)
+See `CURRICULUM.md`. Version every prompt as a file under `prompts/`, change one variable per run, and log the result in `STATE.md`.
